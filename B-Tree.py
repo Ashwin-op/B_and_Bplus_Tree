@@ -190,7 +190,7 @@ class BTree:
         :return: Predecessor of key 'k' which is to be deleted
         """
         if x.leaf:
-            return x.pop()
+            return x.keys.pop()
         n = len(x.keys) - 1
         if len(x.children[n].keys) >= self.t:
             self._deleteSibling(x, n + 1, n)
