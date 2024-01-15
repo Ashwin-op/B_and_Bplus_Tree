@@ -109,7 +109,7 @@ class BTree:
         y.keys = y.keys[0: t - 1]
         if not y.leaf:
             z.children = y.children[t: 2 * t]
-            y.children = y.children[0: t - 1]
+            y.children = y.children[0: t]
 
     def delete(self, x, k):
         """
