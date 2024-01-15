@@ -240,10 +240,10 @@ class BTree:
             lsNode = x.children[j]
             lsNode.keys.append(x.keys[j])
             # Assigning keys of left sibling node to child node
-            for i in range(len(cNode.keys)):
-                lsNode.keys.append(cNode.keys[i])
+            for k in range(len(cNode.keys)):
+                lsNode.keys.append(cNode.keys[k])
                 if len(lsNode.children) > 0:
-                    lsNode.children.append(cNode.children[i])
+                    lsNode.children.append(cNode.children[k])
             if len(lsNode.children) > 0:
                 lsNode.children.append(cNode.children.pop())
             new = lsNode
