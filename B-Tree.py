@@ -153,6 +153,7 @@ class BTree:
                     self._deleteSibling(x, i, i - 1)
                 else:
                     self._deleteMerge(x, i, i - 1)
+                    i -= 1
             self.delete(x.children[i], k)
 
     def _deleteInternalNode(self, x, k, i):
